@@ -1,6 +1,7 @@
 /*
- * Copyright (C) 2012 The Android Open Source Project
- * Copyright (C) 2012 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (c) 2009, The Android Open-Source Project
+ * Copyright (c) 2009-2010, Code Aurora Forum. All rights reserved.
+ * Copyright (c) 2011-2013, The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +16,16 @@
  * limitations under the License.
  */
 
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
+//#ifndef __MSM_AUDIO_CALIBRATION
+//#define __MSM_AUDIO_CALIBRATION
 
-#define BTM_DEF_LOCAL_NAME   "Ascend Y300"
-#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#include <sys/cdefs.h>
 
-#endif
+__BEGIN_DECLS
+
+extern void audcal_initialize(void);
+extern void audcal_deinitialize(void);
+
+__END_DECLS
+
+//#endif

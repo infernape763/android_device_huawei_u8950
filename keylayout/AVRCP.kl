@@ -1,5 +1,4 @@
-#
-# Copyright 2014 The Android Open Source Project
+# Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,17 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Key layout used for Bluetooth AVRCP support.
 
-# Inherit from u8950 device
-$(call inherit-product, device/huawei/u8950/u8950.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_u8950
-PRODUCT_DEVICE := u8950
-PRODUCT_BRAND := Huawei
-PRODUCT_MANUFACTURER := HUAWEI
-PRODUCT_MODEL := Ascend G600
+key 200   MEDIA_PLAY          WAKE
+key 201   MEDIA_PAUSE         WAKE
+key 166   MEDIA_STOP          WAKE
+key 163   MEDIA_NEXT          WAKE
+key 165   MEDIA_PREVIOUS      WAKE
+key 168   MEDIA_REWIND        WAKE
+key 208   MEDIA_FAST_FORWARD  WAKE
